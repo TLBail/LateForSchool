@@ -1,7 +1,7 @@
 # LateForSchool
 Projet d'ISN pour le bac avec Théo/Alexandre/Tristan
-              Late for School
-But du jeu :
+                      Late for School
+  But du jeu :
 Le joueur contrôle une voiture et conduit jusqu’à l’école le plus vite possible tout en révisant son contrôle de mathématiques sous forme de choix. Il obtient le score maximal à son contrôle s'il répond correctement aux différentes questions et arrive vivant.
 Programmation prévue :
 -Le Language utilisé est processing.
