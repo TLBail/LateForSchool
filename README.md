@@ -12,7 +12,7 @@ Programmation prévue :
 - Déplacement des voitures.
 - Création de voitures positionnées aléatoirement sur la route.
 - Le personnage peut mourir s’il rencontre des obstacles mortels ( voitures , fossé ).
-/ Environnement de développement:
+// Environnement de développement:
 - On utilise processing comme environnement de développement.
 Répartition du travail:
 - Tristan : Questions et Score final.
