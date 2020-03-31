@@ -14,6 +14,9 @@ Programmation prévue :
 - Le personnage peut mourir s’il rencontre des obstacles mortels ( voitures , fossé ).
 // Environnement de développement:
 - On utilise processing comme environnement de développement.
+
+### Markdown
+
 Répartition du travail:
 - Tristan : Questions et Score final.
 - Théo : Décor et voiture du joueur.
