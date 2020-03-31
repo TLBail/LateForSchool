@@ -1,7 +1,7 @@
 # LateForSchool
 Projet d'ISN pour le bac avec Théo/Alexandre/Tristan.
 
-## Late for School.
+## Cahiers des charges.
 
 ### But du jeu :
 
