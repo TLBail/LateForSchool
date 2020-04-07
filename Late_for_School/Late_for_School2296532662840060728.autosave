@@ -1,0 +1,70 @@
+PFont f;
+PImage imgs ,bg ,tree;
+
+//apelle des class
+VoitureJoueur voitureJoueur = new VoitureJoueur();
+RouteAnimation[] animation = new RouteAnimation[20];
+ArbreAnimation[] arbreAnimation = new ArbreAnimation[3];
+
+ //animation variable init
+ int state;
+
+void setup() {
+  
+  size(1920, 1080); 
+  noStroke();
+  rectMode(CENTER);
+  
+   // Create the font
+  printArray(PFont.list());
+  f = createFont("SourceCodePro-Regular.ttf", 24);
+  textFont(f);
+  textAlign(RIGHT);
+  textSize(40);
+  
+  //load images
+  imgs = requestImage("racingcar.png");
+  bg = loadImage("bg.png");
+  tree = loadImage("tree.png");
+ 
+ //animation
+ for(int i = 0;i != animation.length;i++){
+   animation[i] = new RouteAnimation(i*200);
+  
+ }
+ 
+ for(int i = 0;i != arbreAnimation.length;i++){
+   arbreAnimation[i] = new ArbreAnimation(i*tree.height+400); 
+  
+ }
+ 
+ 
+}
+
+void draw() {
+  
+  //display title
+  fill(255, 204, 100);
+  text("Late for school",width/2 , height/8);
+  
+  //display background
+  background(bg); 
+  
+  //animation route
+  for (RouteAnimation animate : animation) {
+    animate.Animate();
+    
+  }
+  
+  //animation arbre
+  for (ArbreAnimation arbreAnimate : arbreAnimation) {
+    arbreAnimate.Animate();
+    
+  }
+
+
+  //deplace la voiture du joueur
+  voitureJoueur.SuivreSouri();
+  
+  
+}
