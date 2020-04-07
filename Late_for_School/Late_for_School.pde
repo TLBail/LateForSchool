@@ -1,5 +1,5 @@
 PFont f;
-PImage imgs ,bg ,tree;
+PImage imgs ,bg ,tree; // au goulag
 
 //apelle des class
 VoitureJoueur voitureJoueur = new VoitureJoueur();
