@@ -43,6 +43,7 @@ void setup() {
 
 void draw() {
   
+  
   //display title
   fill(255, 204, 100);
   text("Late for school",width/2 , height/8);
