@@ -30,7 +30,7 @@ class VoitureJoueur extends Voiture{
       posx = width-400;
     }
     
-    image(imgs, posx, posy, imgs.width/sizeFactor, imgs.height/sizeFactor);
+    image(voiture, posx, posy, voiture.width/sizeFactor, voiture.height/sizeFactor);
     
   }
   
