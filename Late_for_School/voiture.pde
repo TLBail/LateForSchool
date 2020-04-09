@@ -22,34 +22,9 @@ class VoitureJoueur extends Voiture{
   }
   
   void SuivreSouri(){
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-   // posx = mouseX-50;
-    
-    
-    if(mouseX-posx >= 50 || posx-mouseX >= 50){
-      acceleration = acceleration + 0.1;
-      
-    }else if(mouseX-posx <= 50 || posx-mouseX <= 50){
-       acceleration = acceleration - 0.1;
-       
-    }
-
-    
-    if(acceleration > 10){
-       acceleration = 10;
-       
-=======
     posx = mouseX;
     if(mouseX <= 400){
       posx = 400;
->>>>>>> parent of fe740ce... lumiere music et bord corrigé
-=======
-    posx = mouseX;
-    if(mouseX <= 400){
-      posx = 400;
->>>>>>> parent of fe740ce... lumiere music et bord corrigé
     }
     if(mouseX >= width-400){
       posx = width-400;
