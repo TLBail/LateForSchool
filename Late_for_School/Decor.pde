@@ -1,5 +1,5 @@
 class Decor{
-  int speed = 20;
+  int speed = 10;
   int state;
   
   
@@ -43,37 +43,13 @@ class ArbreAnimation extends Decor{
   
   void Animate(){
     state = state + speed;
-    image(tree, 100, state, tree.width/2, tree.height/2);
-    image(tree, width-300, state, tree.width/2, tree.height/2);
+    image(tree, 100, state, imgs.width/2, imgs.height/2);
+    image(tree, width-300, state, imgs.width/2, imgs.height/2);
     if(state >= height){
       state = -160;
       
     }
     
   }
-  
-}
-
-class LampAnimation extends Decor {
-  
-  
-  LampAnimation(int newstate){
-    state = newstate;
-    
-  }
-  
-  void Animate(){
-    state = state + speed;
-    image(lamp, 300, state, lamp.width/2, lamp.height/2);
-    image(lampinv, 1450, state, lamp.width/2, lamp.height/2);
-    spotLight(102, 153, 204, mouseX, mouseY, 600, 0, 0, -1, PI/2, 600);
-    if(state >= height){
-      state = -160;
-      
-    }
-    
-  }
-  
-  
   
 }
