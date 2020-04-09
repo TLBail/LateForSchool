@@ -8,7 +8,7 @@ String path;
   
   
 PFont f;
-PImage voiture ,bg ,tree ,lamp, lampinv ,casette; // declarartion nom image
+PImage voiture ,bg ,tree ,lamp, lampinv ,casette ,casette2; // declarartion nom image
 
 
 //apelle des class
@@ -21,7 +21,9 @@ Spotlight[] spotlight = new Spotlight[2];
  //animation variable init
  int state;
  int speed;
-
+ int imgstate = 0;
+ 
+ boolean gomusic = true;
 void setup() {
   
   // for more info about sketchPath, go to https://processing.org/discourse/beta/num_1229443269.html
@@ -49,6 +51,8 @@ void setup() {
   tree = loadImage("tree.png");
   lamp = loadImage("lamp.png");
   casette = loadImage("casette.png");
+  casette2 = loadImage("casette2.png");
+
 
  
  //animation route init
@@ -156,7 +160,41 @@ void draw() {
   text("Late for school",width/2 , height/8);
   text("By Théo Le Bail",width-100 , height-30);
   
-  image(casette,500,500,casette.width/2 ,casette.height/2);
-
   
+  CasetteAnim();
+  
+  fill(255, 204, 100);
+  text(  mouseX + " : mouseX"  , 500, height-100);
+  text(mouseY +" : mouseY" , 500, height-200);
+  
+}
+
+
+void CasetteAnim(){
+  
+  if(mousePressed && mouseX > 1650 && mouseX < 1650+casette.width && mouseY > 800 && mouseY < 800+casette.width){
+    if(gomusic){
+    gomusic = false;
+    }else{
+      gomusic = true;
+      file.play();
+    }      
+  }  
+  if(!gomusic){
+    image(casette,1650,800,casette.width/2 ,casette.height/2);
+    file.stop();
+    
+  }else{
+    imgstate++;
+    if(imgstate < 5){
+      image(casette,1650,800,casette.width/2 ,casette.height/2);
+    }
+    if(imgstate >= 5){
+      image(casette2,1650,800,casette.width/2 ,casette.height/2);
+    }
+    if(imgstate >= 10 ){
+      imgstate = 0; 
+    }
+  }
+    
 }

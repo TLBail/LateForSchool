@@ -102,10 +102,7 @@ class VoitureJoueur extends Voiture{
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////
     image(voiture, posx, posy, voiture.width/sizeFactor, voiture.height/sizeFactor);
     
-    fill(255, 204, 100);
-    text(  dif + " : dif"  , 500, height-100);
-    text(acceleration +" : acceleration" , 500, height-200);
-    text( posx +"  : posx", 500, height-300);
+    
     
   }
   

@@ -20,7 +20,7 @@ class RouteAnimation extends Decor{
   
   void Animate(){
     state = state + speed;
-    fill(255,204,100);
+    fill(255,255,200);
     rect(width/2, state, 50, 100);
     fill(0 , 0, 0);
     rect(width/2, state+100, 50 ,100);
