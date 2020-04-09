@@ -14,7 +14,7 @@ PImage voiture ,bg ,tree ,lamp, lampinv; // declarartion nom image
 //apelle des class
 VoitureJoueur voitureJoueur = new VoitureJoueur();
 RouteAnimation[] animation = new RouteAnimation[20];
-ArbreAnimation[] arbreAnimation = new ArbreAnimation[3];
+ArbreAnimation[] arbreAnimation = new ArbreAnimation[4];
 LampAnimation[] lampAnimation = new LampAnimation[2];
 Spotlight[] spotlight = new Spotlight[2];
 
@@ -57,7 +57,7 @@ void setup() {
  
  //animation arbre init
  for(int i = 0;i != arbreAnimation.length;i++){
-   arbreAnimation[i] = new ArbreAnimation(i*tree.height+400);
+   arbreAnimation[i] = new ArbreAnimation(i*1000);
   
  }
  

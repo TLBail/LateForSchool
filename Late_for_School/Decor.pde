@@ -45,8 +45,8 @@ class ArbreAnimation extends Decor{
     state = state + speed;
     image(tree, 100, state, tree.width/2, tree.height/2);
     image(tree, width-300, state, tree.width/2, tree.height/2);
-    if(state >= height){
-      state = -160;
+    if(state >= 4000){
+      state = -tree.height;
       
     }
     
