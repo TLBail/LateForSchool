@@ -1,5 +1,5 @@
 class Decor{
-  int speed = 20;
+  
   int state;
   
   

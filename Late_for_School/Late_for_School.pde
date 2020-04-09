@@ -8,7 +8,7 @@ String path;
   
   
 PFont f;
-PImage voiture ,bg ,tree ,lamp, lampinv; // declarartion nom image
+PImage voiture ,bg ,tree ,lamp, lampinv ,casette; // declarartion nom image
 
 
 //apelle des class
@@ -20,6 +20,7 @@ Spotlight[] spotlight = new Spotlight[2];
 
  //animation variable init
  int state;
+ int speed;
 
 void setup() {
   
@@ -47,6 +48,8 @@ void setup() {
   bg = loadImage("bg.png");
   tree = loadImage("tree.png");
   lamp = loadImage("lamp.png");
+  casette = loadImage("casette.png");
+
  
  //animation route init
  for(int i = 0;i != animation.length;i++){
@@ -101,7 +104,11 @@ void setup() {
 
 void draw() {
   
-  
+  speed = (height-mouseY)/40;
+  if(speed < 20){
+    speed = 20;
+    
+  }
     
   //ambientLight(200,200,255);
   
@@ -134,9 +141,7 @@ void draw() {
   }
 
 
-   //display title
-  fill(255, 204, 100);
-  text("Late for school",width/2 , height/8);
+   
 
   //deplace la voiture du joueur
   voitureJoueur.SuivreSouri();
@@ -146,5 +151,12 @@ void draw() {
     
   }
   
+  //display title
+  fill(255, 204, 100);
+  text("Late for school",width/2 , height/8);
+  text("By Théo Le Bail",width-100 , height-30);
+  
+  image(casette,500,500,casette.width/2 ,casette.height/2);
+
   
 }

@@ -25,28 +25,36 @@ class VoitureJoueur extends Voiture{
   void SuivreSouri(){
     
     // ON Recupere la difference entre la souris et la position de la voiture
-    float dif = mouseX-posx;
+    float dif = mouseX-posx-60;
     
     
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ////////////////acceleration a droite ou a gauche en fonction de la position de la souris ////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    if(dif >= 100){
+    if(dif >= 50){
       acceleration = acceleration + 0.2;
       
     }
     
-    if( dif <= 7){
+    if( dif <= -50){
       acceleration = acceleration - 0.2;
       
     }
     
-    if(dif <= 100 && dif >= 50){
+    if(dif <= 50 && dif >= 10){
        acceleration = acceleration + 0.1;
        
     }
-    if(dif <= 50 && dif >= 7){
+    if(dif <= 10 && dif >= -50){
        acceleration = acceleration - 0.1;
+       
+    }
+    if(dif <= 10 && dif >= 0){
+       acceleration = acceleration + 0.05;
+       
+    }
+    if(dif <= 0 && dif >= -10){
+       acceleration = acceleration - 0.05;
        
     }
     
@@ -95,8 +103,9 @@ class VoitureJoueur extends Voiture{
     image(voiture, posx, posy, voiture.width/sizeFactor, voiture.height/sizeFactor);
     
     fill(255, 204, 100);
-    text(acceleration,400, height-200);
-    text(posx,400, height-300);
+    text(  dif + " : dif"  , 500, height-100);
+    text(acceleration +" : acceleration" , 500, height-200);
+    text( posx +"  : posx", 500, height-300);
     
   }
   
