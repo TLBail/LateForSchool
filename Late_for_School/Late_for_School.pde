@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import processing.sound.*;
+
+SoundFile file;
+  
+//put your audio file name here
+String audioName = "data/sample.mp3";
+String path;
+  
+  
+=======
+>>>>>>> parent of fe740ce... lumiere music et bord corrigé
+=======
+>>>>>>> parent of fe740ce... lumiere music et bord corrigé
 PFont f;
 PImage voiture ,bg ,tree ,lamp, lampinv; // declarartion nom image
 
