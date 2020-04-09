@@ -119,10 +119,6 @@ void draw() {
   image(bg,0,0,bg.width ,bg.height);
 
   
-  for (LampAnimation lampAnimate : lampAnimation) {
-    lampAnimate.Animate();
-    
-  }
   
   
   //animation route
@@ -144,6 +140,11 @@ void draw() {
 
   //deplace la voiture du joueur
   voitureJoueur.SuivreSouri();
+  
+  for (LampAnimation lampAnimate : lampAnimation) {
+    lampAnimate.Animate();
+    
+  }
   
   
 }

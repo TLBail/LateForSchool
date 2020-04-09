@@ -25,19 +25,29 @@ class VoitureJoueur extends Voiture{
   void SuivreSouri(){
     
    // posx = mouseX-50;
+    float dif = mouseX-posx;
     
-    
-    if(mouseX-posx >= 50 || posx-mouseX >= 50){
-      acceleration = acceleration + 0.1;
+    if(dif >= 100){
+      acceleration = acceleration + 0.2;
       
-    }else if(mouseX-posx <= 50 || posx-mouseX <= 50){
+    }
+    
+    if( dif <= 7){
+      acceleration = acceleration - 0.2;
+      
+    }
+    
+    if(dif <= 100 && dif >= 50){
+       acceleration = acceleration + 0.1;
+       
+    }
+    if(dif <= 50 && dif >= 7){
        acceleration = acceleration - 0.1;
        
     }
-
     
-    if(acceleration > 10){
-       acceleration = 10;
+    if(acceleration > 8){
+       acceleration = 8;
        
     }
 
@@ -49,20 +59,31 @@ class VoitureJoueur extends Voiture{
     }
     
     if(mouseX-50 <= posx){
-      posx = posx - acceleration;
+      posx = posx + acceleration;
       
     }
     
-    if(mouseX <= 600 && posx <= 650){
+    if(posx <= 550){
       posx = 550;
+      if(acceleration < -1){
+        acceleration = -1;
+        
+      }
     }
     
     
-    if(mouseX >= width-550 && posx >= width-600){
+    if(posx >= width-600){
       posx = width-600;
+      if(acceleration > 1){
+        acceleration = 1;
+        
+      }
     }
     
     image(voiture, posx, posy, voiture.width/sizeFactor, voiture.height/sizeFactor);
+    
+    fill(255, 204, 100);
+    text(dif,400, 400);
     
   }
   

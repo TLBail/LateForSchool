@@ -70,7 +70,9 @@ class LampAnimation extends Decor {
     image(lamp, 300, state, lamp.width/2, lamp.height/2);
     image(lampinv, 1450, state, lamp.width/2, lamp.height/2);
     
-    
+    fill(255,225,20,50);
+    circle(500, state+100, 200);
+    circle(1450, state+100, 200);
      
     if(state >= height*3){
       state = -4000;
