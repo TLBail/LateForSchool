@@ -1,12 +1,8 @@
+PImage tree ,lamp, lampinv;
+
 class Decor{
   
   int state;
-  
-  
-  void Speed(int newspeed){
-    speed = newspeed;
-    
-  }
 }
 
 
@@ -74,8 +70,8 @@ class LampAnimation extends Decor {
     circle(500, state+100, 200);
     circle(1450, state+100, 200);
      
-    if(state >= height*3){
-      state = -4000;
+    if(state >= height*5){
+      state = -height*5;
       
     }
     

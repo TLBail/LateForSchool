@@ -1,3 +1,4 @@
+PShape svoiture;
 class Voiture  {
   float posx;
   float posy;
@@ -18,7 +19,7 @@ class Voiture  {
 class VoitureJoueur extends Voiture{
   
   VoitureJoueur(){
-    posy = height*8;
+    posy = height*11;
     sizeFactor = 4;
   }
   
@@ -100,7 +101,7 @@ class VoitureJoueur extends Voiture{
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////Affichage de la voiture///////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    image(voiture, posx, posy, voiture.width/sizeFactor, voiture.height/sizeFactor);
+    shape(svoiture , posx+50 , posy ,100 ,250);
     
     
     
